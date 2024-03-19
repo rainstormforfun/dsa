@@ -1,0 +1,2 @@
+- `3 * x - 1 = x << 2 - x`
+- To judge odd or even, just see the last digit.
