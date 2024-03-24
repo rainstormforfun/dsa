@@ -45,6 +45,8 @@ void bubble_loop(int *arr, int len)
 			}
 		}
 	}	
+
+	return;
 }
 
 void sort_printf(int *arr, int len)
