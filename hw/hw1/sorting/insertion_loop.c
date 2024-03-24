@@ -12,9 +12,12 @@ int main(void)
 	int arr[SIZE];
 
 	num_generator(arr, SIZE);
+	printf("Before insertion_loop:\n");
+	num_printf(arr, SIZE);
 
 	insertion_loop(arr, SIZE);
 
+	printf("After insertion_loop:\n");
 	num_printf(arr, SIZE);
 
 	return EXIT_SUCCESS;

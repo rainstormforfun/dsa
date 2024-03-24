@@ -12,9 +12,12 @@ int main(void)
 	int arr[SIZE];
 
 	num_generator(arr, SIZE);
+	printf("Before insertion_recursion:\n");
+	num_printf(arr, SIZE);
 
 	insertion_recursion(arr, SIZE);
 
+	printf("After insertion_recursion:\n");
 	num_printf(arr, SIZE);
 
 	return EXIT_SUCCESS;

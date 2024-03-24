@@ -12,9 +12,12 @@ int main(void)
 	int arr[SIZE];
 
 	num_generator(arr, SIZE);
+	printf("Before selection_recursion:\n");
+	num_printf(arr, SIZE);
 
 	selection_recursion(arr, SIZE);
 
+	printf("After selection_recursion:\n");
 	num_printf(arr, SIZE);
 
 	return EXIT_SUCCESS;

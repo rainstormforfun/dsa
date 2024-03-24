@@ -1,7 +1,7 @@
 #include <gmp.h>
 #include <stdio.h>
 #include <stdlib.h>
-#define SIZE 10000
+#define SIZE 64
 
 int main(void)
 {
@@ -12,7 +12,7 @@ int main(void)
 	mpz_t tmp;
 	mpz_init(tmp);
 
-	for (int i = 3; i <= SIZE; i++)
+	for (int i = 4; i <= SIZE; i++)
 	{
 		mpz_mul_ui(tmp, result, 2);
 		mpz_set(result, tmp);

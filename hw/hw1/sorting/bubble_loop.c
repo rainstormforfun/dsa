@@ -1,19 +1,24 @@
+#include <time.h>
 #include <stdio.h>
 #include <stdlib.h>
-#include <time.h>
 #define SIZE 50
 
 void num_generator(int *arr, int len);
-void bubble_recursion(int *arr, int len);
+void bubble_loop(int *arr, int len);
 void sort_printf(int *arr, int len);
 
 int main(void)
 {
 	int arr[SIZE];
-	
+
 	num_generator(arr, SIZE);
 
-	bubble_recursion(arr, SIZE);
+	printf("Before bubble_loop:\n");
+	sort_printf(arr, SIZE);
+
+	bubble_loop(arr, SIZE);
+
+	printf("After bubble_loop:\n");
 
 	sort_printf(arr, SIZE);
 
@@ -31,22 +36,22 @@ void num_generator(int *arr, int len)
 	return;
 }
 
-void bubble_recursion(int *arr, int len)
+void bubble_loop(int *arr, int len)
 {
-	if (len == 1)
-		return;
-
-	for (int i = 0; i < len - 1; i++)
+	for (int i = 0; i < len; i++)
 	{
-		if(arr[i] > arr[i + 1])
+		for (int j = 0; j < len - i - 1; j++)
 		{
-			arr[i] = arr[i] ^ arr[i + 1];
-			arr[i + 1] = arr[i] ^ arr[i + 1];
-			arr[i] = arr[i] ^ arr[i + 1];
-		}	
-	}
+			if (arr[j] > arr[j + 1])
+			{
+				arr[j] = arr[j] ^ arr[j + 1];
+				arr[j + 1] = arr[j] ^ arr[j + 1];
+				arr[j] = arr[j] ^ arr[j + 1];
+			}
+		}
+	}	
 
-	return bubble_recursion(arr, len - 1);
+	return;
 }
 
 void sort_printf(int *arr, int len)
@@ -60,3 +65,4 @@ void sort_printf(int *arr, int len)
 
 	return;
 }
+

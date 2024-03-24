@@ -13,8 +13,12 @@ int main(void)
 
 	num_generator(arr, SIZE);
 
+	printf("Before selection_loop:\n");
+	num_printf(arr, SIZE);
+
 	selection_loop(arr, SIZE);
 
+	printf("After selection_loop:\n");
 	num_printf(arr, SIZE);
 
 	return EXIT_SUCCESS;
