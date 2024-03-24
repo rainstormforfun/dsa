@@ -4,7 +4,7 @@
 #define SIZE 50
 
 void num_generator(int *arr, int len);
-void selection_recursion(int *arr, int len);
+void selection_loop(int *arr, int len);
 void num_printf(int *arr, int len);
 
 int main(void)
@@ -13,7 +13,7 @@ int main(void)
 
 	num_generator(arr, SIZE);
 
-	selection_recursion(arr, SIZE);
+	selection_loop(arr, SIZE);
 
 	num_printf(arr, SIZE);
 
@@ -31,7 +31,7 @@ void num_generator(int *arr, int len)
 	return;
 }	
 
-void selection_recursion(int *arr, int len)
+void selection_loop(int *arr, int len)
 {
 	for (int i = 0; i < len; i++)
 	{

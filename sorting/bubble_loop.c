@@ -4,7 +4,7 @@
 #define SIZE 50
 
 void num_generator(int *arr, int len);
-void bubble_recursion(int *arr, int len);
+void bubble_loop(int *arr, int len);
 void sort_printf(int *arr, int len);
 
 int main(void)
@@ -13,7 +13,7 @@ int main(void)
 
 	num_generator(arr, SIZE);
 
-	bubble_recursion(arr, SIZE);
+	bubble_loop(arr, SIZE);
 
 	sort_printf(arr, SIZE);
 
@@ -31,7 +31,7 @@ void num_generator(int *arr, int len)
 	return;
 }
 
-void bubble_recursion(int *arr, int len)
+void bubble_loop(int *arr, int len)
 {
 	for (int i = 0; i < len; i++)
 	{
